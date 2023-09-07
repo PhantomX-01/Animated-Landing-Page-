@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background: rgb(0, 13, 22);
+    font-family: 'Poppins', sans-serif;
+}
+
+#main{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.nav{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    animation: anim 1s forwards 2s;
+}
+
+@keyframes anim {
+    from{
+        top: -100%;
+    }
+    to{
+        top: 0%;
+    }
+}
+
+img{
+    margin-top: 0.3vw;
+    height: 80px;
+    border-radius: 30%;
+}
+
+img:hover{
+    scale: 110%;
+}
+
+.nav2{
+    display: flex;
+    gap: 3vw;
+    padding: 0 2vw;
+    font-size: 1vw;
+}
+
+.nav2 a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 3.36px 8.896px #c4b59d,0 -2px 1px rgb(131, 232, 243);
+}
+
+.nav2 a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: rgb(131, 232, 243);
+    display: block;
+    margin: auto;
+    transition: 0.5s ease-in-out;
+}
+
+.nav2 a:hover::after{
+    width: 100%;
+}
+
+#box1{
+    width: 530px;
+    height: 625px;
+    background: url(Images/hand2.png);
+    position: absolute;
+    bottom: -100%;
+    left: 30%;
+    animation: anim2 2s forwards, anim3 3s forwards 3s;
+}
+
+#box1::after{
+    content: '';
+    position: absolute;
+    width: 530px;
+    height: 625px;
+    background-image: url(Images/hand1.png);
+    left: 0px;
+    z-index: -1;
+}
+
+@keyframes anim2 {
+    from{
+        bottom: -100%;
+    }
+    to{
+        bottom: 0%
+    }
+}
+
+@keyframes anim3 {
+    from{
+        left: 30%;
+        width: 530px;
+    }
+    to{
+        width: 0px;
+        left: 50%;
+    }
+}
+
+#box2{
+    width: auto;
+    height: auto;
+    color: white;
+    font-size: 4em;
+    font-weight: 500;
+    line-height: 130px;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    overflow: hidden;
+}
+
+#text h1{
+    position: relative;
+    left: -100%;
+    text-shadow: 0 4px 9px #c4b59d,0 -4px 2px rgb(131, 232, 243);
+    animation: anim4 2s forwards 3s;
+}
+
+@keyframes anim4 {
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0%;
+    }
+}
